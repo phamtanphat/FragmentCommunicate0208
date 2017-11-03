@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#876c68"
+    tools:context="com.ptp.phamtanphat.fragmentcommunicate0208.MainActivity">
+
+   <TextView
+       android:id="@+id/textviewmain"
+       android:textSize="50sp"
+       android:text="Màn hình Main"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+    <Button
+        android:text="Send data from Main"
+        android:id="@+id/buttonmain"
+        android:layout_below="@+id/textviewmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<FrameLayout-->
+        <!--android:layout_below="@+id/buttonmain"-->
+        <!--android:id="@+id/framelayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+    <!--</FrameLayout>-->
+    <fragment
+        android:layout_marginTop="10dp"
+        android:id="@+id/fragmentA"
+        android:name="com.ptp.phamtanphat.fragmentcommunicate0208.FragmentA"
+        android:layout_below="@+id/buttonmain"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"/>
+    <fragment
+        android:layout_marginTop="10dp"
+        android:id="@+id/fragmentB"
+        android:name="com.ptp.phamtanphat.fragmentcommunicate0208.FragmentB"
+        android:layout_below="@+id/fragmentA"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"/>
+
+</RelativeLayout>
