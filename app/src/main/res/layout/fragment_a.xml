@@ -4,20 +4,10 @@
     android:layout_height="match_parent"
     android:background="#a1d1a2">
 
-    <TextView
-        android:id="@+id/textviewfragmentA"
-        android:textSize="50sp"
-        android:text="Fragment A"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/edittextFragmentA"
-        android:hint="Nhập dữ liệu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
     <Button
         android:id="@+id/buttonfragmentA"
-        android:text="Send data from Fragment A"
+        android:textSize="50sp"
+        android:text="-"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

@@ -20,33 +20,31 @@ import java.util.ArrayList;
 public class FragmentA extends Fragment {
 
     View view;
-    EditText edtfragA;
     Button btnfragA;
-    RecivedData recivedData;
+    GetResult getResult;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_a,container,false);
-        edtfragA = view.findViewById(R.id.edittextFragmentA);
+
         btnfragA = view.findViewById(R.id.buttonfragmentA);
-        recivedData = (RecivedData) getActivity();
-        ArrayList<Person>  persons = new ArrayList<>();
-        persons.add(new Person("Phat"));
-        recivedData.GetData(persons);
+        getResult = (GetResult) getActivity();
+
 
 //        Bundle bundle = getArguments();
 //        Toast.makeText(getActivity(), bundle.getString("data"), Toast.LENGTH_SHORT).show();
         btnfragA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+               TextView textView = getActivity().findViewById(R.id.textviewmain);
+               textView.setText("1");
             }
         });
         return view;
     }
-    public void UpdateDataMain(){
-        TextView txt = getActivity().findViewById(R.id.textviewmain);
-        String dulieu = "Update";
-        txt.setText(dulieu);
-    }
+//    public void UpdateDataMain(){
+//        TextView txt = getActivity().findViewById(R.id.textviewmain);
+//        String dulieu = "Update";
+//        txt.setText(dulieu);
+//    }
 }

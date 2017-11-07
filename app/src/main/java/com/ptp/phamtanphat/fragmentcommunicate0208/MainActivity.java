@@ -11,9 +11,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements RecivedData {
+public class MainActivity extends AppCompatActivity implements GetResult {
 
-    TextView txtmain;
+    public static TextView txtmain;
     Button btnmain;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity implements RecivedData {
             @Override
             public void onClick(View view) {
                 //Tương tác view giữa activity và view của fragment
-                FragmentA fragmentA = (FragmentA) getFragmentManager().findFragmentById(R.id.fragmentA);
-                fragmentA.UpdateDataMain();
+//                FragmentA fragmentA = (FragmentA) getFragmentManager().findFragmentById(R.id.fragmentA);
+//                fragmentA.UpdateDataMain();
                 //Gửi dữ liệu từ activity sang fragment
 //                    + Khi fragment chưa được thêm vào activity
 //                    + Sử dụng bundle để gửi dữ liệu
@@ -46,9 +46,8 @@ public class MainActivity extends AppCompatActivity implements RecivedData {
         btnmain = (Button) findViewById(R.id.buttonmain);
     }
 
-
     @Override
-    public void GetData(ArrayList<Person> person) {
-        Toast.makeText(this, person.get(0).getTen(), Toast.LENGTH_SHORT).show();
+    public void GanDuLieu(int diem) {
+        txtmain.setText(diem+"");
     }
 }
